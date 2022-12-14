@@ -29,7 +29,7 @@ class Api {
           .then(this._requestResult)
       }
 
-      //Запрос данных профиля с сеервера
+      //Запрос данных профиля с сервера
       getUserInfo() {
         return fetch(`${this._url}/users/me`, {
             headers: this._header})
