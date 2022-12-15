@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PopupWithForm } from "./PopupWithForm";
 
 export function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
@@ -16,9 +16,12 @@ export function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
   function handleAddPlaceSubmit(e) {
     e.preventDefault(e);
     onAddPlace({ name: name, link: link });
+  }
+
+  useEffect(() => {
     setName("");
     setLink("");
-  }
+  }, [isOpen])
 
   return (
     <PopupWithForm
@@ -32,7 +35,6 @@ export function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
               <input
                 id="name"
                 className="popup__input_name_add popup__input popup__input_name_edit"
-                defaultValue=""
                 name="name"
                 type="text"
                 placeholder="Название"
@@ -50,7 +52,6 @@ export function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
               <input
                 id="url"
                 className="popup__input_about_add popup__input"
-                defaultValue=""
                 name="link"
                 type="url"
                 placeholder="Ссылка на картинку"

@@ -38,7 +38,6 @@ export function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
                 <input
                     id="nameuser"
                     className="popup__input_name_edit popup__input"
-                    defaultValue=""
                     name="name"
                     type="text"
                     minLength={2}
@@ -54,7 +53,6 @@ export function EditProfilePopup({ isOpen, onClose, onUpdateUser, isLoading }) {
                 <input
                     id="aboutuser"
                     className="popup__input_about_edit popup__input"
-                    defaultValue=""
                     name="about"
                     type="text"
                     minLength={2}
