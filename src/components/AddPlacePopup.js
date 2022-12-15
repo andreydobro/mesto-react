@@ -39,6 +39,7 @@ export function AddPlacePopup({ isOpen, onClose, onAddPlace, isLoading }) {
                 required=""
                 minLength={2}
                 maxLength={30}
+                value={name}
                 onChange={handleNameChange}
               />
               <span id="name-error" className="popup__error">

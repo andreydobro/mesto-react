@@ -5,14 +5,15 @@ export const PopupWithForm = (props) => {
     <section
       className={`popup popup_type_${props.name} ${props.isOpen ? 'popup_opened' : ''}`}
       id={props.name}
-      onClick={props.onClose}>
+      /*onClick={props.onClose}*/>
 
       <div className="popup__content">
         <h2 className="popup__title">{props.title}</h2>
 
         <button
           className="popup__icon-close"
-          type="button" />
+          type="button"
+          onClick={props.onClose} />
 
         <form
           className={`popup__form popup__form_type_${props.name}`}
