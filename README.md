@@ -9,3 +9,8 @@
 Портированы стили
 Вынесены компоненты: App, Card, Footer, Header, ImagePopup, Main, PopupWithForm
 Портирован модуль API
+
+## Инструкция по запуску проекта:
+
+1. Клонируем репозиторий себе на ПК;
+2. В терминале поочередно вписываем команды: npm install --> npm run build --> npm run dev
